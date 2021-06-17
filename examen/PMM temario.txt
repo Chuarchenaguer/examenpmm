@@ -1,0 +1,166 @@
+https://primefaces.org/primereact/showcase/#/setup
+
+Crear APP React: REACT    npx create-react-app nombreApp
+
+npm install -g serveserve -s build
+
+devdocs.io Documentación de todo
+
+
+**Introducción materia sección React JS - https://www.youtube.com/watch?v=k_ZdkkrC_qM
+
+-------------------------------------------------------------------------------------------------------------------
+**React I Introducción - https://www.youtube.com/watch?v=PXSSGCJ5Hg4
+
+-------------------------------------------------------------------------------------------------------------------
+**React II CRA y componentes - https://www.youtube.com/watch?v=RBuRORXDSjA
+-Uso de CRN min 4:00 para usar las librerias? y montar un proyecto react desde 0 imprescindible para EMPEZAR
+-Creación componentes min12:30
+-Creación app React (CRA) con NPM en min16:20
+-Ejecutar "start" la app 28:30 con npm/yarn
+-Hacer build en 35:40
+-36:10 importante, app como clase
+
+-------------------------------------------------------------------------------------------------------------------
+**React III Render Props - https://www.youtube.com/watch?v=Ovd-5MoALTk
+-3:20 Crea app React, 6:20 la arranca con "npm run start"
+-7:00 empieza a hacer plantilla para currar por componentes, como hay que hacerlo
+-7:25 hace función flecha
+-7:40 Crea primer componente "Product"
+-14:15 Parametrizar las clases, IMPRESCINDIBLE, 15:35 le pasa parametros, 16:40 recoge los valores
+-18:50 Crea CCS de Product
+
+-20:00 Convierte un componente a función si es algo que solo lee parametros y no tiene complicación
+-21:35 explica Exports
+-25:00 explica Children importante
+-26:45 Ternarios, operaciones o argumentos <div (classname={'nombre'} >>> 27:40
+-29:30 Para iterar con Arrays IMPORTANTE con KEY 32:40
+-34:10 Iterar con Index
+
+-------------------------------------------------------------------------------------------------------------------
+**React IV State: componentes con estado (stateful) - https://www.youtube.com/watch?v=FtvSpoPJ7dc
+- componente basado en clase 2:30
+- 4:00 crea una function component
+- 6:55 importa CSS para estilo de la función, 7:38 crea una expresión en un span
+- 10:25 llena las variables de la función desde el main.js
+- 11:20 Uso de Fragment para meter varios componentes 
+- 13:40 hacer una función en main para construir (refactorizar) importante
+- 16:10 Declara Estado y lo explica
+- 18:15 Crea constructor para State, es equivalente
+- 20:35 Crea botón para manejar el State
+- 27:15 Explica el Callback ya que setState es asincrono, más info para cambios de estado: 31:35
+- 36:55 Explica como poner un input para rellenar Importante
+
+-------------------------------------------------------------------------------------------------------------------
+**Comunicaciones cliente-servidor con el protocolo HTTP - https://www.youtube.com/watch?v=lOhj0SAM4jU
+- info del protocolo cliente servidor https://bit.ly/39ylvSR 
+
+-------------------------------------------------------------------------------------------------------------------
+**Promesas y programación asíncrona con AJAX - https://www.youtube.com/watch?v=JJYQrZirDvg
+- explica setTimeout y setInterval 5:15
+- Explica las Promesas 10:00
+- Explica peticiones asíncronas XMLHttpRequest 18:40
+- Peticiones con Axios (como hay que hacerlo) 31:05 (32:20 como importar Axios) 36:10 ya tiene la petición con Axios
+- 39:20 Petición Axios con POST
+
+-------------------------------------------------------------------------------------------------------------------
+**React V, Routing.- Navegación entre vistas - https://www.youtube.com/watch?v=TwhrY3E_Zcg
+- 1:20 Instala módulo react-router-dom y crea proyecto nuevo (creo que solo crea proyecto)
+- 5:40 empieza a montar la estructura de la APP (la apariencia) 
+- 16:50 instala el react router dom en el proyecto
+- Documentación: https://reactrouter.com/web/guides/quick-start
+- 19:40 Incluye le BrowserRouting en APP para poder usarlo
+- 20:50 Prepara menu para que sea siempre visible
+- 22:20 Prepara rutas, importa Switch y Route
+- 25:30 Importa Link para aplicar a la lista del menu para poder ir al cambio de página
+- 27:30 Sustituye Link por Navlink
+
+npm install --save react-router-dom
+
+-------------------------------------------------------------------------------------------------------------------
+**Fechas en JS, Momentjs - https://www.youtube.com/watch?v=_kal274XOh8
+- 01:05 Instala libreria moment  npm install moment 
+- 7:10 Momentjs, instalación y uso
+- Establecer formato fecha 8:45
+
+
+-------------------------------------------------------------------------------------------------------------------
+**??Módulos en Javascript - https://www.youtube.com/watch?v=Af1JEMZH3PM
+- 1:45 crea una función suma
+- 3:30 utiliza ${sum(....)} para usar la función
+- Se lleva las funciones a un fichero math externo 4:30
+- 9:50 explica CommonJS para usar modulos exportados
+- 13:40 Usa browserify para poder usarlos
+- 16:45 Usa npm Init para crear el package.json, lo siguiente es importante
+
+-------------------------------------------------------------------------------------------------------------------
+??Watchify - Automatización de builds - https://www.youtube.com/watch?v=XSj8XNE5e5Y
+- Sirve para que con browserify no haya que montar bundle todo el rato, con Watchify lo hace en tiempo de ejecución
+
+
+npm install --save-dev babel-preset-es2015
+
+watchify src/app.js -o src/bundle.js
+
+,
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        { "presets": [ "es2015" ] }
+      ]
+    ]
+  }
+
+
+CSS DEFECTO:
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/*constructor(props) {
+        super(props);
+        renderEjer3 = () => {
+            this.setState({ ejer3: 'Already in!' }, () => {
+                console.log("Change for exercise 3, done")
+            });
+        }
+    }*/
